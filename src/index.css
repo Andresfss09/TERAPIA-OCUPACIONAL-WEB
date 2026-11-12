@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #1C1917;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    color: #F5F5F4;
+  }
+
+  body {
+    background-color: #FAF6F0;
+    color: #1C1917;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html.dark body {
+    background-color: #12100E;
+    color: #F5F5F4;
+  }
+
+  ::selection {
+    background-color: #EBD3CE;
+    color: #1D1614;
+  }
+
+  html.dark ::selection {
+    background-color: #B45F50;
+    color: #FFFFFF;
+  }
+}
+
+/* Comprehensive Warm Dark Mode Theme Overrides for Seamless Contrast */
+html.dark .bg-cream-50 {
+  background-color: #181512 !important;
+}
+
+html.dark .bg-cream-100 {
+  background-color: #12100E !important;
+}
+
+html.dark .bg-cream-200 {
+  background-color: #24201C !important;
+}
+
+html.dark .bg-white {
+  background-color: #1E1B18 !important;
+}
+
+html.dark .bg-white\/95,
+html.dark .bg-white\/90 {
+  background-color: rgba(30, 27, 24, 0.94) !important;
+}
+
+html.dark .bg-cream-50\/90 {
+  background-color: rgba(24, 21, 18, 0.92) !important;
+}
+
+html.dark .bg-blush-50,
+html.dark .bg-blush-50\/70,
+html.dark .bg-blush-50\/90 {
+  background-color: rgba(180, 95, 80, 0.14) !important;
+}
+
+html.dark .bg-blush-100 {
+  background-color: rgba(180, 95, 80, 0.22) !important;
+}
+
+html.dark .bg-sage-50,
+html.dark .bg-sage-50\/90 {
+  background-color: rgba(92, 127, 98, 0.15) !important;
+}
+
+html.dark .bg-sage-100 {
+  background-color: rgba(92, 127, 98, 0.25) !important;
+}
+
+html.dark .bg-lavender-50 {
+  background-color: rgba(138, 110, 176, 0.15) !important;
+}
+
+html.dark .text-stone-900 {
+  color: #FAF6F0 !important;
+}
+
+html.dark .text-stone-800 {
+  color: #E7E0D8 !important;
+}
+
+html.dark .text-stone-700 {
+  color: #D4C9BE !important;
+}
+
+html.dark .text-stone-600 {
+  color: #B5A89B !important;
+}
+
+html.dark .text-stone-500 {
+  color: #9A8D80 !important;
+}
+
+html.dark .text-blush-600,
+html.dark .text-blush-700 {
+  color: #E69A8D !important;
+}
+
+html.dark .text-sage-700,
+html.dark .text-sage-800 {
+  color: #96C49E !important;
+}
+
+html.dark .border-stone-100,
+html.dark .border-stone-200,
+html.dark .border-stone-200\/80,
+html.dark .border-stone-300 {
+  border-color: #302B27 !important;
+}
+
+html.dark .border-blush-200,
+html.dark .border-blush-300 {
+  border-color: rgba(220, 179, 170, 0.3) !important;
+}
+
+html.dark .border-sage-200,
+html.dark .border-sage-300 {
+  border-color: rgba(132, 164, 136, 0.3) !important;
+}
+
+html.dark .divide-stone-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #302B27 !important;
+}
+
+/* Hide scrollbar for horizontal mobile pill carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Refined Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #12100E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCB3AA;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B45F50;
+}
+
+/* Smooth Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
